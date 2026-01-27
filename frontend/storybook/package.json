@@ -2,6 +2,11 @@
   "name": "storybook",
   "version": "1.0.0",
   "type": "module",
+  "main": "./src/components/index.js",
+  "exports": {
+    ".": "./src/components/index.js",
+    "./components/*": "./src/components/*"
+  },
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
