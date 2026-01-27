@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.scss";
+import { Button } from "storybook";
 
 export default function Home() {
   return (
@@ -36,29 +39,18 @@ export default function Home() {
           </p>
         </div>
         <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Button
+            variant="primary"
+            onClick={() => window.open("https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app", "_blank")}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
             Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => window.open("https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app", "_blank")}
           >
             Documentation
-          </a>
+          </Button>
         </div>
       </main>
     </div>

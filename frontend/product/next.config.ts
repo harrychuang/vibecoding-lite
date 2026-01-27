@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "src/styles")],
   },
+  transpilePackages: ["storybook"],
 };
 
 export default nextConfig;
