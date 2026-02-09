@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "@ds/storybook",
   "version": "1.0.0",
   "type": "module",
   "main": "./src/components/index.js",
