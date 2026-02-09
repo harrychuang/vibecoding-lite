@@ -3,6 +3,7 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-primary: #171717;
 $color-secondary: #666666;
+$color-text-secondary: #666666;
 
 // Dark mode colors
 $color-dark-bg: #0a0a0a;
@@ -22,6 +23,7 @@ $spacing-md: 16px;
 $spacing-lg: 24px;
 $spacing-xl: 32px;
 $spacing-2xl: 48px;
+$spacing-3xl: 40px;
 
 // Font sizes
 $font-size-xs: 12px;
@@ -37,9 +39,24 @@ $font-size-4xl: 40px;
 $border-radius-sm: 4px;
 $border-radius-md: 8px;
 $border-radius-lg: 16px;
+$border-radius-xl: 30px;
 $border-radius-full: 9999px;
 
 // Transitions
 $transition-fast: 0.15s ease;
 $transition-normal: 0.2s ease;
 $transition-slow: 0.3s ease;
+
+// Avatar sizes
+$avatar-size-sm: 40px;
+$avatar-size-md: 80px;
+$avatar-size-lg: 120px;
+
+// Button sizes
+$button-height-lg: 69px;
+$button-width-social: 400px;
+
+// Icon sizes
+$icon-size-sm: 24px;
+$icon-size-md: 32px;
+$icon-size-lg: 48px;
