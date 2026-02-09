@@ -1,0 +1,54 @@
+/**
+ * Profile Component Styles
+ * Using Design Tokens from the design system
+ */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Avatar container */
+.avatar {
+  width: var(--abcd-comp-avatar-dimension-default);
+  height: var(--abcd-comp-avatar-dimension-default);
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: var(--abcd-comp-profile-dimension-avatar-gap);
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--abcd-ref-color-neutral-80);
+}
+
+/* User name styling */
+.name {
+  margin: 0;
+  font-family: var(--abcd-sys-font-family-default);
+  font-size: var(--abcd-comp-profile-font-size-name);
+  font-weight: 700;
+  color: var(--abcd-sys-color-on-light-default);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* User info styling */
+.info {
+  margin: 0;
+  margin-top: var(--abcd-comp-profile-dimension-info-gap);
+  font-family: var(--abcd-sys-font-family-default);
+  font-size: var(--abcd-comp-profile-font-size-info);
+  font-weight: 400;
+  color: var(--abcd-sys-color-on-light-light);
+  line-height: 1.4;
+}

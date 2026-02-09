@@ -1,0 +1,59 @@
+/**
+ * Card Component Styles
+ * Using Design Tokens from the design system
+ */
+
+.card {
+  padding: var(--abcd-comp-card-dimension-padding);
+  background-color: var(--abcd-comp-card-color-bg);
+  border-radius: var(--abcd-comp-card-dimension-border-radius);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Default variant - subtle shadow */
+.default {
+  box-shadow: var(--abcd-comp-card-shadow-default);
+}
+
+/* Outlined variant - border instead of shadow */
+.outlined {
+  border: var(--abcd-sys-border-width-default) solid var(--abcd-comp-card-color-border);
+  box-shadow: none;
+}
+
+/* Elevated variant - prominent shadow */
+.elevated {
+  box-shadow: var(--abcd-comp-card-shadow-elevated);
+}
+
+/* Hoverable state */
+.hoverable:hover {
+  box-shadow: var(--abcd-comp-card-shadow-elevated);
+}
+
+.hoverable.elevated:hover {
+  box-shadow: var(--abcd-sys-shadow-lg);
+}
+
+/* Clickable state */
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: translateY(-2px);
+}
+
+.clickable:active {
+  transform: translateY(0);
+}
+
+/* Focus state for accessibility */
+.clickable:focus-visible {
+  outline: var(--abcd-sys-border-width-focus) solid var(--abcd-sys-border-color-focus);
+  outline-offset: 2px;
+}

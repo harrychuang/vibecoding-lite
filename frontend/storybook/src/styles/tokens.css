@@ -1,0 +1,305 @@
+/**
+ * ABCD Design Tokens
+ * 
+ * 本專案採用三層 Token 架構：
+ * - Reference (REF): 原始數值定義
+ * - System (SYS): 語意化的系統層級
+ * - Component (COMP): 元件專用 Token
+ * 
+ * 使用優先順序：Component Token > System Token > Reference Token
+ */
+
+:root {
+  /* ===== REFERENCE TOKENS (REF) ===== */
+
+  /* Font Family */
+  --abcd-ref-font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Neutral Colors */
+  --abcd-ref-color-neutral-100: #ffffff;
+  --abcd-ref-color-neutral-80: #cccccc;
+  --abcd-ref-color-neutral-60: #999999;
+  --abcd-ref-color-neutral-40: #666666;
+  --abcd-ref-color-neutral-20: #333333;
+  --abcd-ref-color-neutral-10: #1a1a1a;
+  --abcd-ref-color-neutral-0: #000000;
+
+  /* Status Colors */
+  --abcd-ref-color-red-50: #ff175d;
+
+  /* Border Radius */
+  --abcd-ref-radius-0: 0px;
+  --abcd-ref-radius-4: 4px;
+  --abcd-ref-radius-8: 8px;
+  --abcd-ref-radius-12: 12px;
+  --abcd-ref-radius-16: 16px;
+
+  /* Border Width */
+  --abcd-ref-border-width-1: 1px;
+  --abcd-ref-border-width-2: 2px;
+
+  /* Shadow */
+  --abcd-ref-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --abcd-ref-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --abcd-ref-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Spacing */
+  --abcd-ref-spacing-8: 8px;
+  --abcd-ref-spacing-8-rem: 0.5rem;
+  --abcd-ref-spacing-10: 10px;
+  --abcd-ref-spacing-10-rem: 0.625rem;
+  --abcd-ref-spacing-16: 16px;
+  --abcd-ref-spacing-16-rem: 1rem;
+  --abcd-ref-spacing-20: 20px;
+  --abcd-ref-spacing-20-rem: 1.25rem;
+  --abcd-ref-spacing-24: 24px;
+  --abcd-ref-spacing-24-rem: 1.5rem;
+  --abcd-ref-spacing-40: 40px;
+  --abcd-ref-spacing-40-rem: 2.5rem;
+  --abcd-ref-spacing-48: 48px;
+  --abcd-ref-spacing-48-rem: 3rem;
+
+  /* Size */
+  --abcd-ref-size-18: 18px;
+  --abcd-ref-size-18-rem: 1.125rem;
+  --abcd-ref-size-24: 24px;
+  --abcd-ref-size-24-rem: 1.5rem;
+  --abcd-ref-size-32: 32px;
+  --abcd-ref-size-32-rem: 2rem;
+  --abcd-ref-size-44: 44px;
+  --abcd-ref-size-44-rem: 2.75rem;
+  --abcd-ref-size-56: 56px;
+  --abcd-ref-size-56-rem: 3.5rem;
+  --abcd-ref-size-64: 64px;
+  --abcd-ref-size-64-rem: 4rem;
+  --abcd-ref-size-120: 120px;
+  --abcd-ref-size-120-rem: 7.5rem;
+
+  /* Font Size */
+  --abcd-ref-font-size-14: 14px;
+  --abcd-ref-font-size-14-rem: 0.875rem;
+  --abcd-ref-font-size-16: 16px;
+  --abcd-ref-font-size-16-rem: 1rem;
+  --abcd-ref-font-size-18: 18px;
+  --abcd-ref-font-size-18-rem: 1.125rem;
+  --abcd-ref-font-size-24: 24px;
+  --abcd-ref-font-size-24-rem: 1.5rem;
+  --abcd-ref-font-size-32: 32px;
+  --abcd-ref-font-size-32-rem: 2rem;
+
+  /* ===== SYSTEM TOKENS (SYS) ===== */
+
+  /* Primary Colors */
+  --abcd-sys-color-primary-default: var(--abcd-ref-color-neutral-0);
+  --abcd-sys-color-primary-lighter: var(--abcd-ref-color-neutral-20);
+
+  /* On Light Surface */
+  --abcd-sys-color-on-light-default: var(--abcd-ref-color-neutral-0);
+  --abcd-sys-color-on-light-light: var(--abcd-ref-color-neutral-20);
+
+  /* On Dark Surface */
+  --abcd-sys-color-on-dark-default: var(--abcd-ref-color-neutral-100);
+  --abcd-sys-color-on-dark-light: var(--abcd-ref-color-neutral-80);
+
+  /* Light Surface */
+  --abcd-sys-color-light-default: var(--abcd-ref-color-neutral-100);
+
+  /* Status */
+  --abcd-sys-color-status-like: var(--abcd-ref-color-red-50);
+
+  /* Spacing */
+  --abcd-sys-spacing-sm: var(--abcd-ref-spacing-10);
+  --abcd-sys-spacing-med: var(--abcd-ref-spacing-20);
+  --abcd-sys-spacing-lg: var(--abcd-ref-spacing-40);
+
+  /* Size */
+  --abcd-sys-size-med: var(--abcd-ref-size-24);
+  --abcd-sys-size-xxl: var(--abcd-ref-size-120);
+
+  /* Font Size */
+  --abcd-sys-font-size-med: var(--abcd-ref-font-size-18);
+  --abcd-sys-font-size-lg: var(--abcd-ref-font-size-32);
+
+  /* Font Family */
+  --abcd-sys-font-family-default: var(--abcd-ref-font-family-primary);
+
+  /* Border */
+  --abcd-sys-border-color-default: var(--abcd-ref-color-neutral-80);
+  --abcd-sys-border-color-focus: var(--abcd-ref-color-neutral-0);
+  --abcd-sys-border-color-error: var(--abcd-ref-color-red-50);
+  --abcd-sys-border-width-default: var(--abcd-ref-border-width-1);
+  --abcd-sys-border-width-focus: var(--abcd-ref-border-width-2);
+
+  /* Border Radius */
+  --abcd-sys-radius-none: var(--abcd-ref-radius-0);
+  --abcd-sys-radius-sm: var(--abcd-ref-radius-4);
+  --abcd-sys-radius-md: var(--abcd-ref-radius-8);
+  --abcd-sys-radius-lg: var(--abcd-ref-radius-12);
+  --abcd-sys-radius-xl: var(--abcd-ref-radius-16);
+
+  /* Shadow */
+  --abcd-sys-shadow-sm: var(--abcd-ref-shadow-sm);
+  --abcd-sys-shadow-md: var(--abcd-ref-shadow-md);
+  --abcd-sys-shadow-lg: var(--abcd-ref-shadow-lg);
+
+  /* Size */
+  --abcd-sys-size-input-height: var(--abcd-ref-size-44);
+
+  /* Font Size */
+  --abcd-sys-font-size-sm: var(--abcd-ref-font-size-14);
+  --abcd-sys-font-size-base: var(--abcd-ref-font-size-16);
+
+  /* ===== COMPONENT TOKENS (COMP) ===== */
+
+  /* Button - Color */
+  --abcd-comp-button-color-default-bg: var(--abcd-sys-color-primary-default);
+  --abcd-comp-button-color-default-label: var(--abcd-sys-color-on-dark-default);
+  --abcd-comp-button-color-default-icon: var(--abcd-sys-color-on-dark-default);
+  --abcd-comp-button-color-light-bg: var(--abcd-sys-color-light-default);
+  --abcd-comp-button-color-light-label: var(--abcd-sys-color-on-light-default);
+  --abcd-comp-button-color-light-icon: var(--abcd-sys-color-on-light-default);
+  --abcd-comp-button-color-like-label: var(--abcd-sys-color-on-light-default);
+  --abcd-comp-button-color-like-icon: var(--abcd-sys-color-on-light-default);
+  --abcd-comp-button-color-like-likded: var(--abcd-sys-color-status-like);
+
+  /* Button - Dimension (Default/Medium) */
+  --abcd-comp-button-dimension-padding-x: var(--abcd-sys-spacing-lg);
+  --abcd-comp-button-dimension-padding-y: var(--abcd-sys-spacing-med);
+
+  /* Button - Size Small (matches Input height) */
+  --abcd-comp-button-size-sm-height: var(--abcd-comp-input-dimension-height);
+  --abcd-comp-button-size-sm-padding-x: var(--abcd-ref-spacing-16);
+  --abcd-comp-button-size-sm-font-size: var(--abcd-sys-font-size-sm);
+  --abcd-comp-button-size-sm-icon-size: var(--abcd-ref-size-18);
+
+  /* Button - Size Medium (Default) */
+  --abcd-comp-button-size-med-height: var(--abcd-ref-size-56);
+  --abcd-comp-button-size-med-padding-x: var(--abcd-sys-spacing-lg);
+  --abcd-comp-button-size-med-font-size: var(--abcd-sys-font-size-med);
+  --abcd-comp-button-size-med-icon-size: var(--abcd-ref-size-24);
+
+  /* Button - Size Large */
+  --abcd-comp-button-size-lg-height: var(--abcd-ref-size-64);
+  --abcd-comp-button-size-lg-padding-x: var(--abcd-ref-spacing-48);
+  --abcd-comp-button-size-lg-font-size: var(--abcd-ref-font-size-24);
+  --abcd-comp-button-size-lg-icon-size: var(--abcd-ref-size-32);
+
+  /* Icon - Dimension */
+  --abcd-comp-icon-dimension-default: var(--abcd-sys-size-med);
+
+  /* Avatar - Dimension */
+  --abcd-comp-avatar-dimension-default: var(--abcd-sys-size-xxl);
+
+  /* Profile - Font Size */
+  --abcd-comp-profile-font-size-name: var(--abcd-sys-font-size-lg);
+  --abcd-comp-profile-font-size-info: var(--abcd-sys-font-size-med);
+
+  /* Profile - Dimension */
+  --abcd-comp-profile-dimension-avatar-gap: var(--abcd-sys-spacing-med);
+  --abcd-comp-profile-dimension-info-gap: var(--abcd-sys-spacing-sm);
+
+  /* Input - Color */
+  --abcd-comp-input-color-bg: var(--abcd-sys-color-light-default);
+  --abcd-comp-input-color-text: var(--abcd-sys-color-on-light-default);
+  --abcd-comp-input-color-placeholder: var(--abcd-ref-color-neutral-60);
+  --abcd-comp-input-color-border-default: var(--abcd-sys-border-color-default);
+  --abcd-comp-input-color-border-focus: var(--abcd-sys-border-color-focus);
+  --abcd-comp-input-color-border-error: var(--abcd-sys-border-color-error);
+  --abcd-comp-input-color-label: var(--abcd-sys-color-on-light-default);
+  --abcd-comp-input-color-helper: var(--abcd-ref-color-neutral-60);
+  --abcd-comp-input-color-error: var(--abcd-sys-border-color-error);
+
+  /* Input - Dimension */
+  --abcd-comp-input-dimension-height: var(--abcd-sys-size-input-height);
+  --abcd-comp-input-dimension-padding-x: var(--abcd-sys-spacing-med);
+  --abcd-comp-input-dimension-padding-y: var(--abcd-sys-spacing-sm);
+  --abcd-comp-input-dimension-border-radius: var(--abcd-sys-radius-sm);
+  --abcd-comp-input-dimension-border-width: var(--abcd-sys-border-width-default);
+  --abcd-comp-input-dimension-border-width-focus: var(--abcd-sys-border-width-focus);
+  --abcd-comp-input-dimension-label-gap: var(--abcd-sys-spacing-sm);
+
+  /* Input - Font */
+  --abcd-comp-input-font-size: var(--abcd-sys-font-size-base);
+  --abcd-comp-input-font-size-label: var(--abcd-sys-font-size-sm);
+  --abcd-comp-input-font-size-helper: var(--abcd-sys-font-size-sm);
+
+  /* Card - Color */
+  --abcd-comp-card-color-bg: var(--abcd-sys-color-light-default);
+  --abcd-comp-card-color-border: var(--abcd-sys-border-color-default);
+
+  /* Card - Dimension */
+  --abcd-comp-card-dimension-padding: var(--abcd-sys-spacing-med);
+  --abcd-comp-card-dimension-border-radius: var(--abcd-sys-radius-md);
+  --abcd-comp-card-dimension-gap: var(--abcd-sys-spacing-med);
+
+  /* Card - Shadow */
+  --abcd-comp-card-shadow-default: var(--abcd-sys-shadow-sm);
+  --abcd-comp-card-shadow-elevated: var(--abcd-sys-shadow-md);
+
+  /* DictionarySearch - Color */
+  --abcd-comp-dictionary-search-color-highlight: var(--abcd-sys-color-status-like);
+
+  /* Dropdown - Color */
+  --abcd-comp-dropdown-color-bg: var(--abcd-sys-color-light-default);
+  --abcd-comp-dropdown-color-text: var(--abcd-sys-color-on-light-default);
+  --abcd-comp-dropdown-color-placeholder: var(--abcd-ref-color-neutral-60);
+  --abcd-comp-dropdown-color-border-default: var(--abcd-sys-border-color-default);
+  --abcd-comp-dropdown-color-border-focus: var(--abcd-sys-border-color-focus);
+  --abcd-comp-dropdown-color-border-error: var(--abcd-sys-border-color-error);
+  --abcd-comp-dropdown-color-label: var(--abcd-sys-color-on-light-default);
+  --abcd-comp-dropdown-color-helper: var(--abcd-ref-color-neutral-60);
+  --abcd-comp-dropdown-color-error: var(--abcd-sys-border-color-error);
+  --abcd-comp-dropdown-color-icon: var(--abcd-ref-color-neutral-40);
+
+  /* Dropdown Menu - Color */
+  --abcd-comp-dropdown-menu-color-bg: var(--abcd-sys-color-light-default);
+  --abcd-comp-dropdown-menu-color-border: var(--abcd-sys-border-color-default);
+
+  /* Dropdown Option - Color */
+  --abcd-comp-dropdown-option-color-text: var(--abcd-sys-color-on-light-default);
+  --abcd-comp-dropdown-option-color-text-disabled: var(--abcd-ref-color-neutral-60);
+  --abcd-comp-dropdown-option-color-bg-hover: var(--abcd-ref-color-neutral-80);
+  --abcd-comp-dropdown-option-color-bg-selected: var(--abcd-ref-color-neutral-80);
+
+  /* Dropdown - Dimension */
+  --abcd-comp-dropdown-dimension-height: var(--abcd-sys-size-input-height);
+  --abcd-comp-dropdown-dimension-padding-x: var(--abcd-sys-spacing-med);
+  --abcd-comp-dropdown-dimension-padding-y: var(--abcd-sys-spacing-sm);
+  --abcd-comp-dropdown-dimension-border-radius: var(--abcd-sys-radius-sm);
+  --abcd-comp-dropdown-dimension-border-width: var(--abcd-sys-border-width-default);
+  --abcd-comp-dropdown-dimension-border-width-focus: var(--abcd-sys-border-width-focus);
+  --abcd-comp-dropdown-dimension-label-gap: var(--abcd-sys-spacing-sm);
+  --abcd-comp-dropdown-dimension-icon-size: var(--abcd-ref-size-18);
+
+  /* Dropdown Menu - Dimension */
+  --abcd-comp-dropdown-menu-dimension-max-height: 200px;
+  --abcd-comp-dropdown-menu-dimension-border-radius: var(--abcd-sys-radius-sm);
+  --abcd-comp-dropdown-menu-dimension-offset: var(--abcd-ref-spacing-8);
+
+  /* Dropdown Option - Dimension */
+  --abcd-comp-dropdown-option-dimension-padding-x: var(--abcd-sys-spacing-med);
+  --abcd-comp-dropdown-option-dimension-padding-y: var(--abcd-ref-spacing-10);
+
+  /* Dropdown - Font */
+  --abcd-comp-dropdown-font-size: var(--abcd-sys-font-size-base);
+  --abcd-comp-dropdown-font-size-label: var(--abcd-sys-font-size-sm);
+  --abcd-comp-dropdown-font-size-helper: var(--abcd-sys-font-size-sm);
+  --abcd-comp-dropdown-font-size-option: var(--abcd-sys-font-size-base);
+
+  /* Dropdown - Shadow */
+  --abcd-comp-dropdown-menu-shadow: var(--abcd-sys-shadow-md);
+}
+
+/* ===== GLOBAL STYLES ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--abcd-sys-font-family-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

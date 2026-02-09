@@ -1,0 +1,146 @@
+/**
+ * Button Component Styles
+ * Using Design Tokens from the design system
+ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--abcd-sys-spacing-sm);
+  font-family: var(--abcd-sys-font-family-default);
+  font-weight: 500;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Default variant - filled black background */
+.default {
+  background-color: var(--abcd-comp-button-color-default-bg);
+  color: var(--abcd-comp-button-color-default-label);
+}
+
+.default .icon {
+  color: var(--abcd-comp-button-color-default-icon);
+}
+
+/* Light variant - white background with border */
+.light {
+  background-color: var(--abcd-comp-button-color-light-bg);
+  color: var(--abcd-comp-button-color-light-label);
+  border: 1px solid var(--abcd-sys-color-primary-default);
+}
+
+.light .icon {
+  color: var(--abcd-comp-button-color-light-icon);
+}
+
+/* Icon variant - text button with icon, no background */
+.icon {
+  background-color: transparent;
+  color: var(--abcd-comp-button-color-like-label);
+  padding: 0;
+}
+
+.icon .icon {
+  color: var(--abcd-comp-button-color-like-icon);
+}
+
+/* Like variant - heart button */
+.like {
+  background-color: transparent;
+  color: var(--abcd-comp-button-color-like-label);
+  padding: 0;
+}
+
+.like .icon {
+  color: var(--abcd-comp-button-color-like-icon);
+}
+
+/* Like variant - liked state */
+.like.liked {
+  color: var(--abcd-comp-button-color-like-likded);
+}
+
+.like.liked .icon {
+  color: var(--abcd-comp-button-color-like-likded);
+}
+
+/* Icon element styling */
+.button .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--abcd-comp-icon-dimension-default);
+  height: var(--abcd-comp-icon-dimension-default);
+}
+
+.button .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Label styling */
+.label {
+  display: inline-block;
+}
+
+/* ===== SIZE VARIANTS ===== */
+
+/* Small size (matches Input height) */
+.sm {
+  height: var(--abcd-comp-button-size-sm-height);
+  padding: 0 var(--abcd-comp-button-size-sm-padding-x);
+  font-size: var(--abcd-comp-button-size-sm-font-size);
+}
+
+.sm .icon {
+  width: var(--abcd-comp-button-size-sm-icon-size);
+  height: var(--abcd-comp-button-size-sm-icon-size);
+}
+
+/* Medium size (default) */
+.med {
+  height: var(--abcd-comp-button-size-med-height);
+  padding: 0 var(--abcd-comp-button-size-med-padding-x);
+  font-size: var(--abcd-comp-button-size-med-font-size);
+}
+
+.med .icon {
+  width: var(--abcd-comp-button-size-med-icon-size);
+  height: var(--abcd-comp-button-size-med-icon-size);
+}
+
+/* Large size */
+.lg {
+  height: var(--abcd-comp-button-size-lg-height);
+  padding: 0 var(--abcd-comp-button-size-lg-padding-x);
+  font-size: var(--abcd-comp-button-size-lg-font-size);
+}
+
+.lg .icon {
+  width: var(--abcd-comp-button-size-lg-icon-size);
+  height: var(--abcd-comp-button-size-lg-icon-size);
+}
+
+/* Override height and padding for icon/like variants (they should be auto height) */
+.icon.sm,
+.icon.med,
+.icon.lg,
+.like.sm,
+.like.med,
+.like.lg {
+  height: auto;
+  padding: 0;
+}

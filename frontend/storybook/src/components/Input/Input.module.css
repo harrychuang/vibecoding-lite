@@ -1,0 +1,84 @@
+/**
+ * Input Component Styles
+ * Using Design Tokens from the design system
+ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--abcd-comp-input-dimension-label-gap);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Label styling */
+.label {
+  font-family: var(--abcd-sys-font-family-default);
+  font-size: var(--abcd-comp-input-font-size-label);
+  font-weight: 500;
+  color: var(--abcd-comp-input-color-label);
+  line-height: 1.4;
+}
+
+/* Base input styling */
+.input {
+  height: var(--abcd-comp-input-dimension-height);
+  padding: var(--abcd-comp-input-dimension-padding-y) var(--abcd-comp-input-dimension-padding-x);
+  font-family: var(--abcd-sys-font-family-default);
+  font-size: var(--abcd-comp-input-font-size);
+  color: var(--abcd-comp-input-color-text);
+  background-color: var(--abcd-comp-input-color-bg);
+  border: var(--abcd-comp-input-dimension-border-width) solid var(--abcd-comp-input-color-border-default);
+  border-radius: var(--abcd-comp-input-dimension-border-radius);
+  outline: none;
+  transition: border-color 0.2s ease, border-width 0.2s ease;
+}
+
+.input::placeholder {
+  color: var(--abcd-comp-input-color-placeholder);
+}
+
+.input:focus {
+  border-color: var(--abcd-comp-input-color-border-focus);
+  border-width: var(--abcd-comp-input-dimension-border-width-focus);
+}
+
+/* Default variant - subtle border */
+.default {
+  border-color: var(--abcd-comp-input-color-border-default);
+}
+
+/* Outlined variant - more prominent border */
+.outlined {
+  border-color: var(--abcd-sys-color-on-light-light);
+}
+
+/* Error state */
+.error {
+  border-color: var(--abcd-comp-input-color-border-error);
+}
+
+.error:focus {
+  border-color: var(--abcd-comp-input-color-border-error);
+}
+
+/* Disabled state */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--abcd-ref-color-neutral-80);
+}
+
+/* Helper text styling */
+.helperText {
+  font-family: var(--abcd-sys-font-family-default);
+  font-size: var(--abcd-comp-input-font-size-helper);
+  color: var(--abcd-comp-input-color-helper);
+  line-height: 1.4;
+}
+
+.errorText {
+  color: var(--abcd-comp-input-color-error);
+}
