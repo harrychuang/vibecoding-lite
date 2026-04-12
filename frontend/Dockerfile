@@ -1,3 +1,5 @@
+# 本地或「Root Directory = frontend」時：建置脈絡為 frontend/，路徑無 frontend/ 前綴。
+# Zeabur 預設倉庫根目錄建置請使用倉庫根目錄的 Dockerfile（內容等價、含 frontend/ 前綴）。
 FROM node:22-alpine AS builder
 WORKDIR /src
 
