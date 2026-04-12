@@ -164,6 +164,7 @@ storybook/src/components/
 1. 每個元件必須有對應的 `.stories.jsx` 檔案
 2. 必須涵蓋元件的所有 variants 和主要 props
 3. 提供清楚的 story 名稱
+4. **Autodocs**：`.storybook/preview.js` 已全域啟用 `tags: ['autodocs']`。每個 story 檔的 `export default` **必須**包含 `component: YourComponent`，Storybook 才會自動產生 Docs 分頁與 props 表（建議以 TypeScript 或 JSDoc／PropTypes 描述 props，文件較完整）。若某個 story 不要出現在 Docs，可在該 story 物件加上 `tags: ['!autodocs']`
 
 ---
 
