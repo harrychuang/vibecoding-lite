@@ -36,4 +36,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--sys-gap-stack-md);
+}
+
+.likeActionError {
+  margin: 0;
+  text-align: center;
+  font: inherit;
+  font-size: 0.875em;
+  color: var(--sys-color-on-surface);
+  opacity: 0.85;
+}
+
+.status,
+.error {
+  margin: 0;
+  text-align: center;
+  font: inherit;
+  color: var(--sys-color-on-surface);
+}
+
+.error {
+  max-width: 28rem;
 }
