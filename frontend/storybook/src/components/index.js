@@ -1,2 +1,4 @@
 // 統一導出所有元件
-export { Button } from './Button/Button.jsx';
+export { Avatar } from './Avatar/Avatar.jsx';
+export { Button, BUTTON_ICON_HEART, BUTTON_ICON_OPTIONS, BUTTON_SOCIAL_PLATFORMS } from './Button/Button.jsx';
+export { SocialIcon } from './SocialIcon/SocialIcon.jsx';

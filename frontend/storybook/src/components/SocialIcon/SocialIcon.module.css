@@ -1,0 +1,52 @@
+.root {
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  pointer-events: none;
+}
+
+.absImg {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.blockImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.googleMask {
+  position: absolute;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-clip: no-clip;
+  -webkit-mask-clip: padding-box;
+}
+
+.googleMaskInner {
+  position: absolute;
+}
+
+.defaultSize {
+  width: var(--comp-social-icon-size);
+  height: var(--comp-social-icon-size);
+}
+
+.messengerRoot {
+  height: var(--comp-social-icon-messenger-height);
+  width: var(--comp-social-icon-size);
+}

@@ -1,0 +1,9 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  width: min(100%, var(--comp-button-max-width));
+  padding: 1rem;
+  box-sizing: border-box;
+}

@@ -1,0 +1,32 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.sectionOriginal {
+  padding: 1.5rem;
+  background: #e8e0f4;
+}
+
+.sectionNegative {
+  padding: 1.5rem;
+  background: #2b2142;
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(11, var(--comp-social-icon-size));
+  gap: 1.25rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

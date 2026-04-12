@@ -1,0 +1,121 @@
+.button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--comp-button-gap);
+  max-width: var(--comp-button-max-width);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  font-family: var(--comp-button-font-family);
+  font-size: var(--comp-button-font-size);
+  font-weight: var(--comp-button-font-weight);
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  transition: var(--comp-button-transition);
+}
+
+.button:focus-visible {
+  outline: var(--comp-button-focus-ring);
+  outline-offset: var(--comp-button-focus-offset);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: var(--sys-opacity-disabled);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--comp-button-gap);
+  min-width: 0;
+}
+
+.innerSolid {
+  flex: 1 1 auto;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+.innerGhost {
+  flex: 0 0 auto;
+}
+
+/* default — 黑底白字 */
+.variantDefault {
+  background: var(--comp-button-bg-default);
+  color: var(--comp-button-fg-default);
+  min-height: var(--comp-button-min-height-solid);
+  padding: var(--comp-button-padding-y) var(--comp-button-padding-x);
+}
+
+.variantDefault:not(:disabled):hover {
+  opacity: var(--ref-opacity-hover-solid);
+}
+
+/* light — 白底黑字 */
+.variantLight {
+  background: var(--comp-button-bg-light);
+  color: var(--comp-button-fg-light);
+  min-height: var(--comp-button-min-height-solid);
+  padding: var(--comp-button-padding-y) var(--comp-button-padding-x);
+}
+
+.variantLight:not(:disabled):hover {
+  opacity: var(--ref-opacity-hover-solid);
+}
+
+/* text / like — 透明底 */
+.variantGhost {
+  background: transparent;
+  color: var(--comp-button-fg-ghost);
+  min-height: var(--comp-button-min-height-ghost);
+  padding: 0;
+}
+
+.variantGhost:not(:disabled):hover {
+  opacity: var(--ref-opacity-hover-solid);
+}
+
+.likeActive {
+  color: var(--comp-button-fg-like-active);
+}
+
+.label {
+  margin: 0;
+  position: relative;
+}
+
+/* SocialIcon 置於按鈕內時對齊 flex */
+.buttonIconSlot {
+  flex-shrink: 0;
+}
+
+/* like 變體：心形（SocialIcon 無對應平台） */
+.likeIconWrap {
+  position: relative;
+  overflow: hidden;
+  width: var(--comp-button-icon-size);
+  height: var(--comp-button-icon-size);
+  flex-shrink: 0;
+}
+
+.layer {
+  position: absolute;
+  pointer-events: none;
+}
+
+.img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}

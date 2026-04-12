@@ -1,3 +1,68 @@
 /* Shared design tokens (Reference → System → Component). Add variables as the design system grows. */
 :root {
+  /* Reference — primitives */
+  --ref-palette-neutral-900: #000000;
+  --ref-palette-neutral-0: #ffffff;
+  --ref-palette-like-500: #ff2a6a;
+  --ref-space-10: 10px;
+  --ref-space-20: 20px;
+  --ref-space-40: 40px;
+  --ref-font-size-24: 24px;
+  --ref-font-weight-bold: 700;
+  --ref-font-family-sans: 'Inter', system-ui, sans-serif;
+  --ref-size-icon-button: 24px;
+  --ref-height-button-solid: 69px;
+  --ref-height-button-ghost: 29px;
+  --ref-width-button-max: 400px;
+  --ref-motion-duration-fast: 150ms;
+  --ref-motion-easing-standard: ease;
+  --ref-opacity-disabled: 0.5;
+  --ref-opacity-hover-solid: 0.92;
+
+  /* Reference — SocialIcon（沿用） */
+  --ref-size-48: 48px;
+  --ref-size-48-001: 48.001px;
+  --ref-size-120: 120px;
+
+  /* System — semantics（跨元件可重用） */
+  --sys-color-on-inverse: var(--ref-palette-neutral-0);
+  --sys-color-on-surface: var(--ref-palette-neutral-900);
+  --sys-color-surface: var(--ref-palette-neutral-0);
+  --sys-color-surface-inverse: var(--ref-palette-neutral-900);
+  --sys-color-like-accent: var(--ref-palette-like-500);
+  --sys-color-focus-ring: var(--ref-palette-neutral-900);
+  --sys-opacity-disabled: var(--ref-opacity-disabled);
+  /* 大型圓形媒體／頭像占位尺寸（語意層，非特定元件名） */
+  --sys-dimension-media-lg: var(--ref-size-120);
+
+  /* Component — SocialIcon */
+  --comp-social-icon-size: var(--ref-size-48);
+  --comp-social-icon-messenger-height: var(--ref-size-48-001);
+
+  /* Component — Button（僅參照 sys / ref） */
+  --comp-button-bg-default: var(--sys-color-surface-inverse);
+  --comp-button-fg-default: var(--sys-color-on-inverse);
+  --comp-button-bg-light: var(--sys-color-surface);
+  --comp-button-fg-light: var(--sys-color-on-surface);
+  --comp-button-fg-ghost: var(--sys-color-on-surface);
+  --comp-button-fg-like-active: var(--sys-color-like-accent);
+  --comp-button-gap: var(--ref-space-10);
+  --comp-button-padding-x: var(--ref-space-40);
+  --comp-button-padding-y: var(--ref-space-20);
+  --comp-button-font-size: var(--ref-font-size-24);
+  --comp-button-font-weight: var(--ref-font-weight-bold);
+  --comp-button-font-family: var(--ref-font-family-sans);
+  --comp-button-min-height-solid: var(--ref-height-button-solid);
+  --comp-button-min-height-ghost: var(--ref-height-button-ghost);
+  --comp-button-max-width: var(--ref-width-button-max);
+  --comp-button-icon-size: var(--ref-size-icon-button);
+  --comp-button-transition:
+    background-color var(--ref-motion-duration-fast) var(--ref-motion-easing-standard),
+    color var(--ref-motion-duration-fast) var(--ref-motion-easing-standard),
+    opacity var(--ref-motion-duration-fast) var(--ref-motion-easing-standard);
+  --comp-button-focus-ring: 2px solid var(--sys-color-focus-ring);
+  --comp-button-focus-offset: 2px;
+
+  /* Component — Avatar（Figma node 102:62，預設 120×120 圓形） */
+  --comp-avatar-size-default: var(--sys-dimension-media-lg);
 }
