@@ -23,6 +23,10 @@
   --ref-size-48: 48px;
   --ref-size-48-001: 48.001px;
   --ref-size-120: 120px;
+  --ref-font-size-32: 32px;
+  --ref-font-size-18: 18px;
+  --ref-font-weight-black: 900;
+  --ref-palette-neutral-600: #666666;
 
   /* System — semantics（跨元件可重用） */
   --sys-color-on-inverse: var(--ref-palette-neutral-0);
@@ -34,6 +38,14 @@
   --sys-opacity-disabled: var(--ref-opacity-disabled);
   /* 大型圓形媒體／頭像占位尺寸（語意層，非特定元件名） */
   --sys-dimension-media-lg: var(--ref-size-120);
+  --sys-color-text-muted: var(--ref-palette-neutral-600);
+  --sys-font-size-title-lg: var(--ref-font-size-32);
+  --sys-font-size-body-md: var(--ref-font-size-18);
+  --sys-font-weight-black: var(--ref-font-weight-black);
+  --sys-font-weight-bold: var(--ref-font-weight-bold);
+  --sys-gap-stack-md: var(--ref-space-20);
+  --sys-gap-stack-sm: var(--ref-space-10);
+  --sys-font-family-sans: var(--ref-font-family-sans);
 
   /* Component — SocialIcon */
   --comp-social-icon-size: var(--ref-size-48);
@@ -65,4 +77,15 @@
 
   /* Component — Avatar（Figma node 102:62，預設 120×120 圓形） */
   --comp-avatar-size-default: var(--sys-dimension-media-lg);
+
+  /* Component — Profile（Figma node 102:66） */
+  --comp-profile-gap-avatar: var(--sys-gap-stack-md);
+  --comp-profile-gap-text: var(--sys-gap-stack-sm);
+  --comp-profile-name-font-size: var(--sys-font-size-title-lg);
+  --comp-profile-name-font-weight: var(--sys-font-weight-black);
+  --comp-profile-name-color: var(--sys-color-on-surface);
+  --comp-profile-info-font-size: var(--sys-font-size-body-md);
+  --comp-profile-info-font-weight: var(--sys-font-weight-bold);
+  --comp-profile-info-color: var(--sys-color-text-muted);
+  --comp-profile-font-family: var(--sys-font-family-sans);
 }
