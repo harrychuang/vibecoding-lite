@@ -1,4 +1,5 @@
 import styles from './Avatar.module.css';
+import { resolveStaticImportUrl } from '../../utils/resolveStaticImportUrl.js';
 import { defaultAvatarSrc } from './avatarDefaultAsset.js';
 
 function cx(...parts) {
@@ -15,7 +16,7 @@ function cx(...parts) {
  * @param {string} [props.className]
  */
 export function Avatar({ src, alt = '', size, className, ...rest }) {
-  const resolvedSrc = src ?? defaultAvatarSrc;
+  const resolvedSrc = resolveStaticImportUrl(src ?? defaultAvatarSrc);
   const dim =
     size === undefined || size === null
       ? null

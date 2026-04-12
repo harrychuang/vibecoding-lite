@@ -1,56 +1,63 @@
 "use client";
 
-import Image from "next/image";
+import type { ButtonHTMLAttributes } from "react";
+/**
+ * Figma profile-card（node 103:285）。
+ * 文案暫寫於此（workshop 豁免 i18n；正式產品應改由 i18n 來源提供）。
+ */
 import styles from "./page.module.scss";
-import { Button } from "storybook";
+import { Profile, Button } from "storybook";
+
+/** storybook Button 會把其餘 props 轉給原生 button，但套件型別未包含原生事件；僅供此頁傳入 onClick 等。 */
+type ButtonNativeExtras = Pick<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "onClick"
+>;
+
+const SOCIAL_LINKS = [
+  {
+    icon: "Instagram" as const,
+    label: "Instagram",
+    href: "https://www.instagram.com/",
+  },
+  {
+    icon: "Medium" as const,
+    label: "Medium",
+    href: "https://medium.com/",
+  },
+  {
+    icon: "LinkedIn" as const,
+    label: "Linkedin",
+    href: "https://www.linkedin.com/",
+  },
+];
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+        <Profile
+          name="Harry"
+          info="Hi I'm Harry!"
+          avatarSrc="/avatar.png"
+          avatarAlt=""
         />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className={styles.links}>
+          {SOCIAL_LINKS.map(({ icon, label, href }) => (
+            <Button
+              key={label}
+              variant="default"
+              icon={icon}
+              label={label}
+              {...({
+                onClick: () =>
+                  window.open(href, "_blank", "noopener,noreferrer"),
+              } satisfies ButtonNativeExtras)}
+            />
+          ))}
         </div>
-        <div className={styles.ctas}>
-          <Button
-            variant="primary"
-            onClick={() => window.open("https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app", "_blank")}
-          >
-            Deploy Now
-          </Button>
-          <Button
-            variant="secondary"
-            onClick={() => window.open("https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app", "_blank")}
-          >
-            Documentation
-          </Button>
+        <div className={styles.actions}>
+          <Button variant="like" icon="Heart" label="Like" />
         </div>
       </main>
     </div>
