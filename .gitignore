@@ -24,6 +24,16 @@ Desktop.ini
 *.sublime-project
 
 ############################
+# Agent / local tooling (not part of app source)
+############################
+
+.agents/
+.claude/
+.cursor/
+.kiro/
+skills-lock.json
+
+############################
 # Env files
 ############################
 
