@@ -28,3 +28,6 @@ yarn-error.log*
 
 *.pem
 .tmp
+
+# Wrong cwd can mirror the host path and nest `.next` under `frontend/Dropbox/...`
+/Dropbox/
